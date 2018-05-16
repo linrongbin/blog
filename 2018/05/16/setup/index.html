@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="Setup of blogEnvironmentOS： Windows 7 (64 bit)12$ unameMINGW64_NT-6.1 Node12$ node --versionv10.1.0 Git12$ git --versiongit version 2.17.0.windows.1 hexoWhy：Git 和Node 就够了，jelly 要ruby呀Info:已经包含很多信息，包括操">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-16T06:30:18.870Z">
+<meta property="og:updated_time" content="2018-05-16T06:49:45.003Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="setup">
 <meta name="twitter:description" content="Setup of blogEnvironmentOS： Windows 7 (64 bit)12$ unameMINGW64_NT-6.1 Node12$ node --versionv10.1.0 Git12$ git --versiongit version 2.17.0.windows.1 hexoWhy：Git 和Node 就够了，jelly 要ruby呀Info:已经包含很多信息，包括操">
@@ -323,7 +323,7 @@
                 
               
 
-              <time title="创建时间：2018-05-16 12:03:45 / 修改时间：14:30:18" itemprop="dateCreated datePublished" datetime="2018-05-16T12:03:45+08:00">2018-05-16</time>
+              <time title="创建时间：2018-05-16 12:03:45 / 修改时间：14:49:45" itemprop="dateCreated datePublished" datetime="2018-05-16T12:03:45+08:00">2018-05-16</time>
             
 
             
@@ -391,8 +391,9 @@
 <h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
 <p> solution is to install hexo-deployer-git<br>Credit to <a href="https://github.com/hexojs/hexo/issues/1040" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues/1040</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
 <ol start="4">
-<li>改favicon.ico<br>制作工具：<a href="https://favicon.io/" target="_blank" rel="noopener">https://favicon.io/</a><br>验证工具：<a href="https://realfavicongenerator.net/" target="_blank" rel="noopener">https://realfavicongenerator.net/</a><br>将 favicon.ico 放在站点的 source 目录下就可以。</li>
+<li>改favicon.ico<br>制作工具：<a href="https://favicon.io/" target="_blank" rel="noopener">https://favicon.io/</a><br>验证工具：<a href="https://realfavicongenerator.net/" target="_blank" rel="noopener">https://realfavicongenerator.net/</a></li>
 </ol>
+<p>将 favicon.ico 放在站点的 source 目录下就可以。<br>更改’theme\next_config.yml’ 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /favicon.ico</span><br><span class="line">  medium: /favicon.ico</span><br><span class="line">  apple_touch_icon: /favicon.ico</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
