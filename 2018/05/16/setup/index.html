@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="Setup of blog 环境和工具 OS： Windows 7 (64 bit) 12$ unameMINGW64_NT-6.1 Node 12$ node --versionv10.1.0 Git 12$ git --versiongit version 2.17.0.windows.1 hexo Why：Git 和Node 就够了，jelly 要ruby呀 Info:已经">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-16T08:03:35.113Z">
+<meta property="og:updated_time" content="2018-05-16T08:21:35.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客的诞生过程">
 <meta name="twitter:description" content="Setup of blog 环境和工具 OS： Windows 7 (64 bit) 12$ unameMINGW64_NT-6.1 Node 12$ node --versionv10.1.0 Git 12$ git --versiongit version 2.17.0.windows.1 hexo Why：Git 和Node 就够了，jelly 要ruby呀 Info:已经">
@@ -339,7 +339,7 @@
                 
               
 
-              <time title="创建时间：2018-05-16 12:03:45 / 修改时间：16:03:35" itemprop="dateCreated datePublished" datetime="2018-05-16T12:03:45+08:00">2018-05-16</time>
+              <time title="创建时间：2018-05-16 12:03:45 / 修改时间：16:21:35" itemprop="dateCreated datePublished" datetime="2018-05-16T12:03:45+08:00">2018-05-16</time>
             
 
             
@@ -390,8 +390,8 @@
 <h3 id="visual-studio-code">Visual Studio Code</h3>
 <p>原因：3 个平台都支持，很猛，reduce learning curve Version: <code>Help</code>–&gt; <code>About</code> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Version 1.23.1</span><br><span class="line">Commit d0182c3417d225529c6d5ad24b7572815d0de9ac</span><br><span class="line">Date 2018-05-10T17:11:17.614Z</span><br><span class="line">Shell 1.7.12</span><br><span class="line">Renderer 58.0.3029.110</span><br><span class="line">Node 7.9.0</span><br><span class="line">Architecture x64</span><br></pre></td></tr></table></figure></p>
 <hr>
-<h3 id="配置-vscode">配置 VSCODE</h3>
-<h4 id="vscode-extensions">vscode extensions</h4>
+<h2 id="配置-vscode">配置 VSCODE</h2>
+<h3 id="vscode-extensions">vscode extensions</h3>
 <p>How: <code>Extensions</code> –&gt; <code>Search</code> hexo –&gt; vscode-hexo</p>
 <hr>
 <h2 id="git-config">Git Config</h2>
@@ -407,40 +407,64 @@
 </ol>
 <hr>
 <h2 id="hexo-config">Hexo Config</h2>
-<p>Config File: _config.yml 1. 改URL <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: https://linrongbin.github.io</span><br><span class="line">root: /blog</span><br></pre></td></tr></table></figure></p>
-<ol type="1">
-<li>Deploy to the above git repo. change hexo _config.yml file to deploy to the blog repository</li>
-</ol>
+<ul>
+<li>配置文件：<code>~\hexo\blog\_config.yml</code> Config File: _config.yml</li>
+</ul>
+<h3 id="改url">改URL</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: https://linrongbin.github.io</span><br><span class="line">root: /blog</span><br></pre></td></tr></table></figure>
+<h3 id="发布到-git">发布到 Git</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/linrongbin/blog.git</span><br><span class="line">  branch: master</span><br><span class="line">  message: deploy by hexo</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>Theme of blog 浪费时间找了很多，最后决定用Star 最多的theme，原因是好看且活得久。 此帖有排名：https://www.zhihu.com/question/24422335 下载： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>使用: 更新_config.yml里面Extensions部分 in _config.yml <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure></p>
-<ol start="3" type="1">
-<li>改语言 要看看你的theme支持的语言，可以查看 底下的.yml文件名 注意：有点theme使用zh-Hans <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<h3 id="发布">发布</h3>
+<h4 id="发布测试">发布测试</h4>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
-<p>solution is to install hexo-deployer-git Credit to https://github.com/hexojs/hexo/issues/1040 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>解决：install hexo-deployer-git</li>
+<li>参考：https://github.com/hexojs/hexo/issues/1040 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="改主题-theme">改主题 theme</h3>
+<ul>
+<li>浪费时间找了很多，最后决定用Star 最多的theme，原因是好看且活得久。</li>
+<li>此帖有排名：https://www.zhihu.com/question/24422335</li>
+<li><p>下载： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p></li>
+<li><p>使用: 更新_config.yml里面Extensions部分 in _config.yml <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<ol start="3" type="1">
+<li>改语言</li>
+</ol>
+<ul>
+<li>要看看你的theme支持的语言，可以查看 底下的.yml文件名</li>
+<li>注意：有点theme使用zh-Hans <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure></li>
+</ul>
 <hr>
-<h3 id="个人定制">个人定制</h3>
-<ol start="4" type="1">
-<li>改favicon.ico 制作工具：https://favicon.io/ 验证工具：https://realfavicongenerator.net/</li>
-</ol>
-<p>将 favicon.ico 放在站点的 source 目录下就可以。 更改’theme_config.yml’ 文件 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /favicon.ico</span><br><span class="line">  medium: /favicon.ico</span><br><span class="line">  apple_touch_icon: /favicon.ico</span><br></pre></td></tr></table></figure></p>
+<h2 id="主题定制">主题定制</h2>
+<ul>
+<li>配置文件：<code>~\hexo\blog\themes\next\_config.yml</code></li>
+</ul>
+<h3 id="改favicon.ico">改favicon.ico</h3>
+<ul>
+<li>制作工具：https://favicon.io/</li>
+<li>验证工具：https://realfavicongenerator.net/</li>
+<li>步骤：
+<ol type="1">
+<li>将 favicon.ico 放在站点的 source 目录下</li>
+<li>更改’theme_config.yml’ 文件 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: /favicon.ico</span><br><span class="line">  medium: /favicon.ico</span><br><span class="line">  apple_touch_icon: /favicon.ico</span><br></pre></td></tr></table></figure></li>
+</ol></li>
+</ul>
+<h3 id="改scheme">改scheme</h3>
 <p>没有左边栏 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scheme: Pisces</span><br></pre></td></tr></table></figure></p>
-<ol start="5" type="1">
-<li>支持MathJax</li>
-</ol>
-<p>参考：https://github.com/theme-next/hexo-theme-next/blob/master/docs/MATH.md 安装： 安装pandoc： https://github.com/jgm/pandoc/releases/tag/2.2.1 注意：需要重启IDE Vscode，否则不认pandoc命令 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ pandoc -v</span><br><span class="line">pandoc.exe 2.2.1</span><br><span class="line">Compiled with pandoc-types 1.17.4.2, texmath 0.11, skylighting 0.7.0.2</span><br><span class="line">Default user data directory: C:\Users\rolin\AppData\Roaming\pandoc</span><br><span class="line">Copyright (C) 2006-2018 John MacFarlane</span><br><span class="line">Web:  http://pandoc.org</span><br><span class="line">This is free software; see the source for copying conditions.</span><br><span class="line">There is no warranty, not even for merchantability or fitness</span><br><span class="line">for a particular purpose.</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-pandoc --save # or hexo-renderer-kramed</span><br></pre></td></tr></table></figure>
-<p>配置： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">math:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure></p>
-<p>测试： <span class="math display">\[
+<h3 id="支持mathjax">支持MathJax</h3>
+<ul>
+<li>参考：https://github.com/theme-next/hexo-theme-next/blob/master/docs/MATH.md</li>
+<li>安装： 安装pandoc： https://github.com/jgm/pandoc/releases/tag/2.2.1</li>
+<li><p>注意：需要重启IDE Vscode，否则不认pandoc命令 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ pandoc -v</span><br><span class="line">pandoc.exe 2.2.1</span><br><span class="line">Compiled with pandoc-types 1.17.4.2, texmath 0.11, skylighting 0.7.0.2</span><br><span class="line">Default user data directory: C:\Users\rolin\AppData\Roaming\pandoc</span><br><span class="line">Copyright (C) 2006-2018 John MacFarlane</span><br><span class="line">Web:  http://pandoc.org</span><br><span class="line">This is free software; see the source for copying conditions.</span><br><span class="line">There is no warranty, not even for merchantability or fitness</span><br><span class="line">for a particular purpose.</span><br></pre></td></tr></table></figure></p></li>
+<li><p>换render <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm un hexo-renderer-marked --save</span><br><span class="line">npm i hexo-renderer-pandoc --save # or hexo-renderer-kramed</span><br></pre></td></tr></table></figure></p></li>
+<li><p>配置： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">math:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure></p></li>
+<li><p>触发： 添加 mathjax: true 到md 文件头</p></li>
+<li><p>测试： 看到公式表示成功。 <span class="math display">\[
 \begin{eqnarray}
 x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}
 \end{eqnarray}
-\]</span></p>
+\]</span></p></li>
+</ul>
 <p>Simple inline <span class="math inline">\(a = b + c\)</span>.</p>
 
       
@@ -614,7 +638,7 @@ x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#setup-of-blog"><span class="nav-number">1.</span> <span class="nav-text">Setup of blog</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境和工具"><span class="nav-number">1.1.</span> <span class="nav-text">环境和工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#os-windows-7-64-bit"><span class="nav-number">1.1.1.</span> <span class="nav-text">OS： Windows 7 (64 bit)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#node"><span class="nav-number">1.1.2.</span> <span class="nav-text">Node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git"><span class="nav-number">1.1.3.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">1.1.4.</span> <span class="nav-text">hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#visual-studio-code"><span class="nav-number">1.1.5.</span> <span class="nav-text">Visual Studio Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-vscode"><span class="nav-number">1.1.6.</span> <span class="nav-text">配置 VSCODE</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vscode-extensions"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">vscode extensions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-config"><span class="nav-number">1.2.</span> <span class="nav-text">Git Config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-config"><span class="nav-number">1.3.</span> <span class="nav-text">Hexo Config</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#发布"><span class="nav-number">1.3.1.</span> <span class="nav-text">发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#个人定制"><span class="nav-number">1.3.2.</span> <span class="nav-text">个人定制</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#setup-of-blog"><span class="nav-number">1.</span> <span class="nav-text">Setup of blog</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境和工具"><span class="nav-number">1.1.</span> <span class="nav-text">环境和工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#os-windows-7-64-bit"><span class="nav-number">1.1.1.</span> <span class="nav-text">OS： Windows 7 (64 bit)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#node"><span class="nav-number">1.1.2.</span> <span class="nav-text">Node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git"><span class="nav-number">1.1.3.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo"><span class="nav-number">1.1.4.</span> <span class="nav-text">hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#visual-studio-code"><span class="nav-number">1.1.5.</span> <span class="nav-text">Visual Studio Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-vscode"><span class="nav-number">1.2.</span> <span class="nav-text">配置 VSCODE</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vscode-extensions"><span class="nav-number">1.2.1.</span> <span class="nav-text">vscode extensions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-config"><span class="nav-number">1.3.</span> <span class="nav-text">Git Config</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-config"><span class="nav-number">1.4.</span> <span class="nav-text">Hexo Config</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#改url"><span class="nav-number">1.4.1.</span> <span class="nav-text">改URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布到-git"><span class="nav-number">1.4.2.</span> <span class="nav-text">发布到 Git</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#发布测试"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">发布测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改主题-theme"><span class="nav-number">1.4.3.</span> <span class="nav-text">改主题 theme</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题定制"><span class="nav-number">1.5.</span> <span class="nav-text">主题定制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#改favicon.ico"><span class="nav-number">1.5.1.</span> <span class="nav-text">改favicon.ico</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改scheme"><span class="nav-number">1.5.2.</span> <span class="nav-text">改scheme</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支持mathjax"><span class="nav-number">1.5.3.</span> <span class="nav-text">支持MathJax</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
