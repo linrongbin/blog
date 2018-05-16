@@ -86,7 +86,7 @@
     root: '/blog/',
     scheme: 'Muse',
     version: '6.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="blog">
 <meta property="og:description" content="Setup of blogEnvironmentOS： Windows 7 (64 bit)12$ unameMINGW64_NT-6.1 Node12$ node --versionv10.1.0 Git12$ git --versiongit version 2.17.0.windows.1 hexoWhy：Git 和Node 就够了，jelly 要ruby呀Info:已经包含很多信息，包括操">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-16T06:13:28.019Z">
+<meta property="og:updated_time" content="2018-05-16T06:30:18.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="setup">
 <meta name="twitter:description" content="Setup of blogEnvironmentOS： Windows 7 (64 bit)12$ unameMINGW64_NT-6.1 Node12$ node --versionv10.1.0 Git12$ git --versiongit version 2.17.0.windows.1 hexoWhy：Git 和Node 就够了，jelly 要ruby呀Info:已经包含很多信息，包括操">
@@ -323,7 +323,7 @@
                 
               
 
-              <time title="创建时间：2018-05-16 12:03:45 / 修改时间：14:13:28" itemprop="dateCreated datePublished" datetime="2018-05-16T12:03:45+08:00">2018-05-16</time>
+              <time title="创建时间：2018-05-16 12:03:45 / 修改时间：14:30:18" itemprop="dateCreated datePublished" datetime="2018-05-16T12:03:45+08:00">2018-05-16</time>
             
 
             
@@ -385,13 +385,13 @@
 </ol>
 <p>使用: 更新_config.yml里面Extensions部分 in _config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure></p>
 <ol start="3">
-<li>改语言<br>要看看你的theme支持的语言，可以查看\themes\next\languages\ 底下的.yml文件名<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-Hans</span><br></pre></td></tr></table></figure>
+<li>改语言<br>要看看你的theme支持的语言，可以查看\themes\next\languages\ 底下的.yml文件名<br>注意：有点theme使用zh-Hans<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">language: zh-CN</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
 <p> solution is to install hexo-deployer-git<br>Credit to <a href="https://github.com/hexojs/hexo/issues/1040" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues/1040</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
 <ol start="4">
-<li>改favicon.ico<br>制作工具：<a href="https://favicon.io/" target="_blank" rel="noopener">https://favicon.io/</a><br>将 favicon.ico 放在站点的 source 目录下就可以。</li>
+<li>改favicon.ico<br>制作工具：<a href="https://favicon.io/" target="_blank" rel="noopener">https://favicon.io/</a><br>验证工具：<a href="https://realfavicongenerator.net/" target="_blank" rel="noopener">https://realfavicongenerator.net/</a><br>将 favicon.ico 放在站点的 source 目录下就可以。</li>
 </ol>
 
       
@@ -570,6 +570,11 @@
       
 
       
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
 
     </div>
   </aside>
@@ -621,11 +626,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
