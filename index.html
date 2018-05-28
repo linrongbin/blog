@@ -313,7 +313,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/blog/2018/05/28/sample-covariance/" itemprop="url">
-                  sample-covariance
+                  为什么样本方差除以n-1
                 </a>
               
             
@@ -339,9 +339,13 @@
                 
               
 
-              <time title="创建时间：2018-05-28 22:12:28" itemprop="dateCreated datePublished" datetime="2018-05-28T22:12:28+08:00">2018-05-28</time>
+              <time title="创建时间：2018-05-28 22:12:28 / 修改时间：22:23:50" itemprop="dateCreated datePublished" datetime="2018-05-28T22:12:28+08:00">2018-05-28</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -375,7 +379,28 @@
       
         
           
-            
+            <p>除以n-1是为了实现无偏估计，但是为什么呢？</p>
+<p>问题转为证明：</p>
+<p>样本方差的期望等于总体方差。 <span class="math display">\[
+    E(s^2) = E\left(\frac{1}{n - 1} \sum_{j=1}^{n} (X_j - \bar{X})^2\right) = \sigma^2
+\]</span></p>
+<p>基本公式： <span class="math display">\[
+\left\{
+\begin{aligned}
+    &amp; E(Z_1 + Z_2) = E(Z_1) + E(Z_2), \text{ for any } Z_1, Z_2 \\
+    &amp; \text{Var}(a Z) = a^2 \text{Var}(Z), \text{ for any } Z \\
+    &amp; \text{Var}(Z_1 + Z_2) = \text{Var}(Z_1) + \text{Var}(Z_2), \text{ if } Z_1 \text{ and } Z_2 \text{ are independent} \\
+\end{aligned}
+\right.
+\]</span></p>
+<p><span class="math display">\[
+\text{Var}(Z) = E((Z - E(Z))^2) \\
+    &amp; = E(Z^2 - 2ZE(Z) + E(Z)^2) \\
+    &amp; = E(Z^2) - E(2ZE(Z)) + E(Z)^2 \\
+    &amp; = E(Z^2) - 2E(Z)E(Z) + E(Z)^2 \\
+    &amp; = E(Z^2) - 2E(Z)^2 + E(Z)^2 \\
+    = E(Z^2) - E(Z)^2
+\]</span></p>
 
           
         
@@ -1811,9 +1836,9 @@ x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}
   
     
       
-    
-      
         
+      
+    
       
     
       
