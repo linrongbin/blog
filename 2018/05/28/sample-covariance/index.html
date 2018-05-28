@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="天天佳佳">
 <meta property="og:description" content="除以n-1是为了实现无偏估计，但是为什么呢？ 问题转为证明： 样本方差的期望等于总体方差。 \[     E(s^2) = E\left(\frac{1}{n - 1} \sum_{j=1}^{n} (X_j - \bar{X})^2\right) = \sigma^2 \] 基本公式： \[ \left\{ \begin{aligned}     &amp;amp; E(Z_1 + Z_">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-28T14:29:22.648Z">
+<meta property="og:updated_time" content="2018-05-28T14:32:12.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么样本方差除以n-1">
 <meta name="twitter:description" content="除以n-1是为了实现无偏估计，但是为什么呢？ 问题转为证明： 样本方差的期望等于总体方差。 \[     E(s^2) = E\left(\frac{1}{n - 1} \sum_{j=1}^{n} (X_j - \bar{X})^2\right) = \sigma^2 \] 基本公式： \[ \left\{ \begin{aligned}     &amp;amp; E(Z_1 + Z_">
@@ -338,7 +338,7 @@
                 
               
 
-              <time title="创建时间：2018-05-28 22:12:28 / 修改时间：22:29:22" itemprop="dateCreated datePublished" datetime="2018-05-28T22:12:28+08:00">2018-05-28</time>
+              <time title="创建时间：2018-05-28 22:12:28 / 修改时间：22:32:12" itemprop="dateCreated datePublished" datetime="2018-05-28T22:12:28+08:00">2018-05-28</time>
             
 
             
@@ -406,6 +406,25 @@
     = &amp; \ \frac{1}{n-1} \left[n \sigma^2 + n \mu ^2 - n \left( \frac{1}{n} \sigma^2 + \mu ^2 \right) \right] \\
     = &amp; \ \frac{1}{n-1} \left[n \sigma^2 + n \mu ^2 - \sigma^2 - n \mu ^2 \right] \\
     = &amp; \ \sigma^2 \\
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+    \sum_{j=1}^{n} (X_j - \mu)^2 \geq \sum_{j=1}^{n} (X_j - \bar{X})^2
+\]</span></p>
+<p>具体的推导过程： <span class="math display">\[
+\begin{aligned}
+    E\left(\sum_{j=1}^{n} (X_j - \mu)^2\right) = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X} + \bar{X} - \mu)^2\right) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 + \sum_{j=1}^{n} 2(X_j - \bar{X})(\bar{X} - \mu) + \sum_{j=1}^{n} (\bar{X} - \mu)^2 \right) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 + \sum_{j=1}^{n} (\bar{X} - \mu)^2 \right) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + E \left(\sum_{j=1}^{n} (\bar{X} - \mu)^2 \right) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + \sum_{j=1}^{n} E \left((\bar{X} - \mu)^2 \right) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + \sum_{j=1}^{n} \left( \text{Var} (\bar{X} - \mu) + E (\bar{X} - \mu)^2 \right) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + \sum_{j=1}^{n} \left( \text{Var} (\bar{X}) + E (\bar{X} - \mu)^2 \right) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + \sum_{j=1}^{n} \text{Var} (\bar{X}) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + n \text{Var} (\bar{X}) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + n \text{Var} (\frac{1}{n} \sum_{j=1}^{n} X_j) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + n \frac{1}{n^2} \sum_{j=1}^{n} \text{Var} (X_j) \\
+    = &amp; \ E \left(\sum_{j=1}^{n} (X_j - \bar{X})^2 \right) + \sigma^2 \\
 \end{aligned}
 \]</span></p>
 
